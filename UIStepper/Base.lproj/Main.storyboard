@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIStepper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pacman" translatesAutoresizingMaskIntoConstraints="NO" id="yu9-uC-XuC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="240" translatesAutoresizingMaskIntoConstraints="NO" id="lTO-vb-Wht">
+                                <rect key="frame" x="160" y="489" width="94" height="32"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="valueDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="0F2-Rc-Kxr"/>
+                                </connections>
+                            </stepper>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dN-5G-L9t">
+                                <rect key="frame" x="87" y="279" width="240" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Mxd-4D-MdK"/>
+                                    <constraint firstAttribute="width" constant="240" id="sIc-eA-CIa"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pacmanSign" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-YH-IBU">
+                                <rect key="frame" x="20" y="44" width="374" height="109"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tc6-iV-IH9">
+                                <rect key="frame" x="132" y="450" width="150" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ucx-YH-IBU" secondAttribute="trailing" constant="20" id="4vb-nr-HOP"/>
+                            <constraint firstItem="1dN-5G-L9t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="A4T-qf-dh9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lTO-vb-Wht" secondAttribute="trailing" constant="160" id="BLk-CG-T9I"/>
+                            <constraint firstItem="lTO-vb-Wht" firstAttribute="top" secondItem="1dN-5G-L9t" secondAttribute="bottom" constant="90" id="Dh9-su-Kmo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1dN-5G-L9t" secondAttribute="trailing" constant="87" id="G60-uG-AGu"/>
+                            <constraint firstItem="ucx-YH-IBU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GIJ-WY-XpB"/>
+                            <constraint firstItem="lTO-vb-Wht" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="RHm-cT-WqO"/>
+                            <constraint firstItem="1dN-5G-L9t" firstAttribute="top" secondItem="ucx-YH-IBU" secondAttribute="bottom" constant="126" id="Syw-cQ-q0P"/>
+                            <constraint firstItem="1dN-5G-L9t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="235" id="W1K-Yt-Tfp"/>
+                            <constraint firstAttribute="bottom" secondItem="yu9-uC-XuC" secondAttribute="bottom" id="lFm-Cu-fg2"/>
+                            <constraint firstItem="ucx-YH-IBU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lxM-Ep-afP"/>
+                            <constraint firstItem="yu9-uC-XuC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rFN-s8-x0u"/>
+                            <constraint firstItem="yu9-uC-XuC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="unY-sn-gJL"/>
+                            <constraint firstAttribute="trailing" secondItem="yu9-uC-XuC" secondAttribute="trailing" id="vJP-Oz-OC5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="tc6-iV-IH9" id="yaH-Cq-4zZ"/>
+                        <outlet property="shapeView" destination="1dN-5G-L9t" id="DsQ-FJ-aeb"/>
+                        <outlet property="stepper" destination="lTO-vb-Wht" id="agf-ia-h8A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pacman" width="640" height="1136"/>
+        <image name="pacmanSign" width="699" height="159"/>
+    </resources>
+</document>
